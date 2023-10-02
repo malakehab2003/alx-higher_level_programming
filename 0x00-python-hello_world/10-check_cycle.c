@@ -1,30 +1,29 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
 int check_cycle(listint_t *list)
 {
-  listint_t *new;
+	listint_t *slow, *fast;
 
-  if (list == NULL) {
-    return 0;
-  }
+	if (list == NULL)
+	{
+		return (0);
+	}
 
-  new = list;
+	slow = list;
+	fast = list->next;
 
-  while (new != NULL && new->next != NULL) {
-    if (new == NULL || new->next == NULL) {
-      return 0;
-    }
+	while (fast != NULL && fast->next != NULL)
+	{
+		if (slow == fast)
+		{
+			return (1);
+		}
 
-    if (new == new->next) {
-      return 1;
-    }
+		slow = slow->next;
+		fast = fast->next->next;
+	}
 
-    new = new->next;
-  }
-
-  return 0;
+	return (0);
 }
-
