@@ -7,8 +7,8 @@ if number > 0:
     print(f"{last} and is ", end="")
 else:
     number = number * -1
-    last = number % 10
-    print(f"-{last} and is ", end="")
+    last = (number % 10) * -1
+    print(f"{last} and is ", end="")
 if last > 5:
     print("greater than 5")
 elif last == 0:
