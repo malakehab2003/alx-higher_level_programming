@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-def remove_char_at(str, n):
-    i = 0
-    new = ""
-    for char in str:
-        if i == n:
-            continue
-        new[i] += char
-        i += 1
-    return new
+def remove_char_at(string, n):
+    if n < 0 or n >= len(string):
+        return string
+
+    result = ""
+    for i in range(len(string)):
+        if i != n:
+            result += string[i]
+
+    return result
