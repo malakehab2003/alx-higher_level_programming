@@ -5,5 +5,5 @@ for num in range(122, 96):
         new = num - 32
     else:
         new = num
-    print(f"{new}", end="")
+    print("{}".format(new), end="")
     i += 1
