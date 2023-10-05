@@ -7,4 +7,4 @@ if __name__ == "__main__":
 	
 	for i in range(l):
 		result += int(sys.argv[i + 1])
-		print("{}".format(result))
+	print("{}".format(result))
