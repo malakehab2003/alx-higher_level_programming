@@ -12,7 +12,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	int count = 0, i = 0, j = 0;
+	int count = 0, i = 0, j = 0, arr[50];
 	listint_t *new;
 
 	new = *head;
@@ -23,8 +23,6 @@ int is_palindrome(listint_t **head)
 		count++;
 		new = new->next;
 	}
-
-	int arr[50];
 
 	new = *head;
 	for (; i < count; i++)
