@@ -10,7 +10,7 @@
  *
  * @head: the first point in the list to check
 */
-/**
+
 int is_palindrome(listint_t **head)
 {
 	int count = 0, i = 0, j, countcp = 0, half = 0;
@@ -44,37 +44,4 @@ int is_palindrome(listint_t **head)
 		new = new->next;
 	}
 	return (1);
-}
-*/
-int is_palindrome(listint_t **head)
-{
-    if (*head == NULL || (*head)->next == NULL)
-        return (1);
-
-    listint_t *slow = *head;
-    listint_t *fast = *head;
-    listint_t *prev = NULL;
-
-    while (fast != NULL && fast->next != NULL)
-    {
-        fast = fast->next->next;
-        listint_t *next = slow->next;
-        slow->next = prev;
-        prev = slow;
-        slow = next;
-    }
-
-    if (fast != NULL)
-        slow = slow->next;
-
-    while (slow != NULL)
-    {
-        if (prev->n != slow->n)
-            return (0);
-
-        prev = prev->next;
-        slow = slow->next;
-    }
-
-    return (1);
 }
