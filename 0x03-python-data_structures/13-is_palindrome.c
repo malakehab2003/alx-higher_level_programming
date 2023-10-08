@@ -12,10 +12,11 @@
 
 int is_palindrome(listint_t **head)
 {
-	int count = 0, i = 0, j = 0, arr[50];
-	listint_t *new;
+	int count = 0, i = 0, j, countcp = 0, half = 0;
+	listint_t *new, *last;
 
 	new = *head;
+	last = *head;
 	if (*head == NULL)
 		return (1);
 	while (new != NULL)
@@ -23,19 +24,23 @@ int is_palindrome(listint_t **head)
 		count++;
 		new = new->next;
 	}
-
+	countcp = count - 1;
 	new = *head;
-	for (; i < count; i++)
-	{
-		arr[i] = new->n;
-		new = new->next;
-	}
+	half = count / 2;
 
-	i--;
-	for (; j < (count / 2); j++, i--)
+	for (; i <= half; i++)
 	{
-		if (arr[j] != arr[i])
+		for (j = 0; j < countcp; j++)
+		{
+			last = last->next;
+		}
+		countcp--;
+		if (new->n != last->n)
+		{
 			return (0);
+		}
+		last = *head;
+		new = new->next;
 	}
 	return (1);
 }
