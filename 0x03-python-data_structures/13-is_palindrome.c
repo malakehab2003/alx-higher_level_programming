@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 		new = new->next;
 	}
 
-	int arr[count - 1];
+	int arr[50];
 
 	new = *head;
 	for (; i < count; i++)
