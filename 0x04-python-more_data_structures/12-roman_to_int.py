@@ -12,9 +12,7 @@ def roman_to_int(roman_string):
         if flag == 1:
             flag = 0
             continue
-        if itr < len(roman_string)
-        and roman_to_num.get(roman_string[itr])
-        > roman_to_num.get(roman_string[i]):
+        if itr < len(roman_string) and roman_to_num.get(roman_string[itr]) > roman_to_num.get(roman_string[i]):
             total += int(roman_to_num.get(roman_string[itr]) - roman_to_num.get(roman_string[i]))
             flag = 1
         else:
