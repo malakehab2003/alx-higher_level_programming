@@ -13,7 +13,6 @@ def roman_to_int(roman_string):
             flag = 0
             continue
         cur = roman_string[i]
-        nex = roman_string[itr]
         if itr < len(roman_string)
         and roman.get(roman_string[itr]) > roman.get(cur):
             nex = roman_string[itr]
