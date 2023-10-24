@@ -57,7 +57,7 @@ class Square:
 
     def __str__(self):
         if self.__size == 0:
-            return
+            return ''
         new_lines = '\n' * self.position[1]
         spaces = ' ' * self.position[0]
         hashes = '#' * self.size
