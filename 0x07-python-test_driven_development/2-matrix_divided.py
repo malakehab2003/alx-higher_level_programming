@@ -2,6 +2,9 @@
 """ matrix divide """
 
 def matrix_divided(matrix, div):
+    new_mat = []
+    if len(matrix) == 0:
+        return new_mat
     l = len(matrix[0])
     for i in range(len(matrix)):
         if l != len(matrix[i]):
@@ -13,7 +16,6 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    new_mat = []
     element = 0
     for i in range(len(matrix)):
         element = list(map(lambda x: round(x / div, 2), matrix[i]))

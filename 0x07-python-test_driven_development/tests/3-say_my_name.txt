@@ -1,0 +1,33 @@
+Import function:
+
+	>>> hi = __import__('3-say_my_name').say_my_name
+
+Test hi:
+
+	>>> hi("Malak", "ehab")
+	My name is Malak ehab
+
+	>>> hi("malak", "")
+	My name is malak 
+
+	>>> hi("","hi")
+	My name is  hi
+
+	>>> hi("malak")
+	My name is malak 
+
+	>>> hi(22, "malak")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> hi("Wuhibe", None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> hi()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+	>>> hi(0, 1)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
