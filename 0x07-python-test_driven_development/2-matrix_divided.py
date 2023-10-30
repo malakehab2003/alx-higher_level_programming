@@ -6,9 +6,9 @@ def matrix_divided(matrix, div):
     new_mat = []
     if len(matrix) == 0:
         return new_mat
-    l = len(matrix[0])
+    length = len(matrix[0])
     for i in range(len(matrix)):
-        if l != len(matrix[i]):
+        if length != len(matrix[i]):
             raise TypeError("Each row of the matrix must have the same size")
         for j in range(len(matrix[i])):
             if type(matrix[i][j]) is not int and type(matrix[i][j]) is not float:
