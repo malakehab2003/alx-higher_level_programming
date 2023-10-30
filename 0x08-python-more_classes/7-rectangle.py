@@ -5,6 +5,7 @@
 class Rectangle:
     """rectangle"""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         if type(height) is not int:
@@ -62,7 +63,7 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                    draw += "#"
+                    draw += str(self.print_symbol)
                 draw += "\n"
         return draw[:-1]
 
