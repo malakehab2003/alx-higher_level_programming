@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ matrix divide """
 
+
 def matrix_divided(matrix, div):
     new_mat = []
     if len(matrix) == 0:
