@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    if type(text) != str or text is None or len(text) < 0:
+    if type(text) is not str or text is None or len(text) < 0:
         raise TypeError("text must be a string")
     aux = 1
     for c in text:
