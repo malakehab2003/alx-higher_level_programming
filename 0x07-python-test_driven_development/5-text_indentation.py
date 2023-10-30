@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""separate the text after .:?"""
+
+
 def text_indentation(text):
     if type(text) != str or text is None or len(text) < 0:
         raise TypeError("text must be a string")
