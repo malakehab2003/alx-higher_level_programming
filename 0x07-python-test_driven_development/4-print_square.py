@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""print the givin square size"""
+
+
 def print_square(size):
     if type(size) is not int:
         raise TypeError("size must be an integer")
