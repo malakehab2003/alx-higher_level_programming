@@ -5,6 +5,7 @@
 class Rectangle:
     """rectangle"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if type(height) is not int:
             raise TypeError("height must be an integer")
