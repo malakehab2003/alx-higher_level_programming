@@ -19,6 +19,9 @@ class test(unittest.TestCase):
     def test_same(self):
         l = [1, 1, 1]
         self.assertEqual(max_integer(l), 1)
+    def test_end(self):
+        l = [1, 2, 4]
+        self.assertEqual(max_integer(l), 4)
 
 
 if __name__ == '__main__':
