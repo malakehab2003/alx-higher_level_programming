@@ -102,11 +102,14 @@ class Rectangle(Base):
         rec_str = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
         return rec_str
 
-    def update(self, *args):
-        if len(args) > 0:
+    def update(self, *args, **kwargs):
+        if args:
             attributes = ["id", "_Rectangle__width", 
-                           "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+                          "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
             for i in range(len(args)):
                 setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
 
