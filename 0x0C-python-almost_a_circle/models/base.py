@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """private the id"""
         if id is not None:
             self.id = id
         else:
@@ -17,12 +18,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """change a dict to string"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save json to file"""
         list_d = []
         if not list_objs:
             pass
@@ -36,6 +39,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """get from json string to dict"""
         the_list = []
         if json_string is None or not json_string:
             return the_list
@@ -45,6 +49,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """write the attrs that aready set"""
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -57,6 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load from json file"""
         file_name = cls.__name__ + ".json"
         try:
             with open(file_name, 'r') as file:
