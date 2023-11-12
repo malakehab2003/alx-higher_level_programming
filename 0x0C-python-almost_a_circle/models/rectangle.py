@@ -34,7 +34,6 @@ class Rectangle(Base):
 
         self.__y = y
 
-
         super().__init__(id)
 
     @property
@@ -99,13 +98,18 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        rec_str = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
-        return rec_str
+        str_rectangle = "[Rectangle] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_rectangle + str_id + str_xy + str_wh
 
     def update(self, *args, **kwargs):
         if args:
-            attributes = ["id", "_Rectangle__width", 
-                          "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+            attributes = ["id", "_Rectangle__width",
+                          "_Rectangle__height", "_Rectangle__x",
+                          "_Rectangle__y"]
             for i in range(len(args)):
                 setattr(self, attributes[i], args[i])
         else:
@@ -118,4 +122,3 @@ class Rectangle(Base):
         for i in attrs:
             new_dict[i] = getattr(self, i)
         return new_dict
-        
