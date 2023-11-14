@@ -4,6 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """private the data"""
         if type(width) is not int:
