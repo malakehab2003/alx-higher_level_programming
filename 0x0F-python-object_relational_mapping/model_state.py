@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ make state class"""
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 mymetadata = MetaData()
