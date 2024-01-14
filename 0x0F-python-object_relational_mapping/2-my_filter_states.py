@@ -13,10 +13,10 @@ if __name__ == "__main__":
         db=sys.argv[3])
     mycursor = con.cursor()
 
-    query = f"SELECT * \
+    query = "SELECT * \
         FROM states \
-        WHERE name LIKE BINARY '{sys.argv[4]}' \
-        ORDER BY id"
+        WHERE name LIKE BINARY '{}' \
+        ORDER BY id".format(sys.argv[4])
     mycursor.execute(query)
     data = mycursor.fetchall()
     for row in data:
