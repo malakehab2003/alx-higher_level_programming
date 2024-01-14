@@ -13,8 +13,10 @@ if __name__ == "__main__":
         db=sys.argv[3])
     mycursor = con.cursor()
 
-    query = "SELECT cities.id, cities.name \
+    query = "SELECT cities.id, cities.name, states.name \
         FROM cities \
+        JOIN states \
+        ON states.id = cities.state_id \
         ORDER BY id"
     mycursor.execute(query)
     data = mycursor.fetchall()
