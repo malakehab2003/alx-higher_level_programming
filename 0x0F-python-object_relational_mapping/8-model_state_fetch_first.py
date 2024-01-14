@@ -17,7 +17,7 @@ if __name__ == "__main__":
     session = Session()
 
     data = session.query(State).first()
-    if data == None:
+    if data is None:
         data = "Nothing"
     else:
         data = f"{data.id}: {data.name}"
