@@ -13,7 +13,7 @@ if __name__ == "__main__":
         db=sys.argv[3])
     mycursor = con.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id"
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id"
     mycursor.execute(query)
     data = mycursor.fetchall()
     for row in data:
