@@ -22,10 +22,6 @@ if __name__ == "__main__":
     mycursor.execute(query, (sys.argv[4],))
     data = mycursor.fetchall()
     tmp = list(i[0] for i in data)
-    for item in tmp:
-        if item != tmp[len(tmp) - 1]:
-            print(item, end=", ")
-        else:
-            print(item)
+    print(*tmp, sep=", ")
     mycursor.close()
     con.close()
