@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
+
 class City(Base):
     """ the city class to table of db"""
     __tablename__ = 'cities'
