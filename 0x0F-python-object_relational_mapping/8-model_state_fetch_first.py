@@ -16,10 +16,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    flag = 0
-    for data in session.query(State).order_by(State.id):
-        print(data.id, data.name, sep=": ")
-        flag = 1
-        break
-    if flag == 0:
-        print("Nothing")
+    data = session.query(State).order_by(State.id)[0]
+    if data == None:
+        data = "Nothing"
+    print(data)
