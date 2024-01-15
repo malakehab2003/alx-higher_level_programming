@@ -16,8 +16,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    for data in session.query(State).order_by(State.id):
-        if 'a' in data.name:
-            session.delete(data)
+    for data in session.query(State).filter(State.name.like('%a%')):
+        session.delete(data)
 
     session.commit()
