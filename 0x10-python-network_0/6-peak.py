@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""count the peak of a list"""
+
 
 def find_peak(list_of_integers):
     """
