@@ -5,7 +5,7 @@ import urllib.request
 
 if __name__ == "__main__":
     """ print format of url data"""
-    requset = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+    request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
     with urllib.request.urlopen(request) as req:
         data = req.read()
         print("Body response:")
