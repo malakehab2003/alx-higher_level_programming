@@ -10,4 +10,4 @@ if __name__ == "__main__":
     querystr = urllib.parse.urlencode(param).encode("ascii")
     request = urllib.request.Request(url, querystr)
     with urllib.request.urlopen(request) as req:
-        print(response.read().decode("utf-8"))
+        print(req.read().decode("utf-8"))
