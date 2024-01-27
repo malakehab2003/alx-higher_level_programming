@@ -8,7 +8,7 @@ if __name__ == "__main__":
     param = {"q": ""}
     if len(sys.argv) >= 2:
         param = {'q': sys.argv[1]}
-    r = requests.post("http://0.0.0.0:5000/search_user", data = param)
+    r = requests.post("http://0.0.0.0:5000/search_user", data=param)
     try:
         req = r.json()
         if req == {}:
