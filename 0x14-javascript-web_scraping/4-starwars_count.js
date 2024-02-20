@@ -13,7 +13,7 @@ const url = x[2];
 request(url, (err, res, body) => {
   if (err) {
     console.log(err);
-  } else if (response.statusCode === 200) {
+  } else if (res.statusCode === 200) {
     let count = 0;
     const jsonRes = JSON.parse(body).results;
     for (const index in jsonRes) {
@@ -25,5 +25,7 @@ request(url, (err, res, body) => {
       }
     }
     console.log(count);
+  } else {
+    console.log(err);
   }
 });
