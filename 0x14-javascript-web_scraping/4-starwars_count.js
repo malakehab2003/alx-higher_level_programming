@@ -9,6 +9,10 @@ if (x.length !== 3) {
 }
 
 const url = x[2];
+if (url !== 'https://swapi-api.alx-tools.com/api/films') {
+  console.log('wrong url');
+  process.exit(1);
+}
 
 request(url, (err, res, body) => {
   if (err) {
