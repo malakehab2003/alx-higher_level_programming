@@ -9,10 +9,6 @@ if (x.length !== 3) {
 }
 
 const url = x[2];
-if (url !== 'https://swapi-api.alx-tools.com/api/films') {
-  console.log('wrong url');
-  process.exit(1);
-}
 
 request(url, (err, res, body) => {
   if (err) {
@@ -23,7 +19,7 @@ request(url, (err, res, body) => {
     for (const index in jsonRes) {
       const chars = jsonRes[index].characters;
       for (const i in chars) {
-        if (chars[i] === 'https://swapi-api.alx-tools.com/api/people/18/') {
+        if (chars[i].includes('18')) {
           count++;
         }
       }
