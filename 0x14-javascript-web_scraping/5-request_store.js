@@ -9,10 +9,10 @@ if (x.length !== 4) {
   process.exit(1);
 }
 
-url = x[2];
-file = x[3];
+const url = x[2];
+const file = x[3];
 
-request (url, (err, res, body) => {
+request(url, (err, res, body) => {
   if (err) {
     console.log(err);
   } else {
